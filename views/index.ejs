@@ -13,6 +13,23 @@
         <h1>
             Message Board
         </h1>
+        <%messages.forEach(message=>{ %>
+            <div class="message-card">
+
+                <h2 class="message-text">
+                    <%=message.text%>
+                </h2>
+                <div class="user-date-container">
+                    <p>
+                        <%=message.user%>
+                    </p>
+                    <p>
+                        <%=(message.added).toString()%>
+                    </p>
+                </div>
+
+            </div>
+            <%});%>
     </div>
 </body>
 
